@@ -1366,8 +1366,9 @@
         max-width: 100%;
         margin: 0 auto;
         padding: 0 20px;
-        margin-left: 20px;
-        
+
+        justify-items: center;
+        align-items: center;
     }
 
     #homepage_GRID a {
@@ -1389,7 +1390,8 @@
     #crunchyrollHeader,
     #primeHeader {
         padding: 20px 0;
-        gap: 2px;
+        gap: 6px;
+        justify-content: center;
     }
 
     .appleTvHeaderIcon,
@@ -1428,7 +1430,7 @@
         padding: 8px 16px;
     }
 
-    /* ================= CARD FIX (IMPORTANT PART) ================= */
+    /* ================= CARDS ================= */
     .appleTvCard,
     .osnCard,
     .netflixCard,
@@ -1442,7 +1444,6 @@
         flex-shrink: 0;
     }
 
-    /* IMAGE SECTION = 80% */
     .appleTvCardImg,
     .osnCardImg,
     .netflixCardImg,
@@ -1452,7 +1453,6 @@
         height: 80%;
     }
 
-    /* IMAGE FIT */
     .appleTvCardImg img,
     .osnCardImg img,
     .netflixCardImg img,
@@ -1464,7 +1464,6 @@
         object-fit: cover;
     }
 
-    /* RATING BAR = 20% */
     .appleTvCardRating,
     .osnCardRating,
     .netflixCardRating,
@@ -1512,4 +1511,15 @@
         font-size: 26px;
         padding: 4px 10px;
     }
+}
+/* Disable OSN icon on OSN page */
+#osnBody #osnIconOsn {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Stop hover animation on disabled OSN icon */
+#osnHeader a:hover #osnIconOsn {
+    transform: none;
 }
