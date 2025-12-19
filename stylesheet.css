@@ -1451,10 +1451,10 @@
     .crunchyrollCard,
     .primeCard {
         width: 100%;
-        max-width: 250px;
+        max-width: 270px;
         aspect-ratio: 230 / 380;
         height: auto;
-        border-radius: 22px;
+        border-radius: 24px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -1516,8 +1516,8 @@
     }
 
     .badge {
-        width: 32px;
-        height: 32px;
+        width: 20px;
+        height: 20px;
         font-size: 16px;
     }
 
