@@ -1450,11 +1450,12 @@
     .cenimaCard,
     .crunchyrollCard,
     .primeCard {
-        width: 150px;
-        height: 260px;
-        border-radius: 20px;
+        width: 100%;
+        max-width: 250px;
+        aspect-ratio: 230 / 380;
+        height: auto;
+        border-radius: 22px;
         overflow: hidden;
-        flex-shrink: 0;
         display: flex;
         flex-direction: column;
     }
@@ -1465,8 +1466,7 @@
     .cenimaCardImg,
     .crunchyrollCardImg,
     .primeCardImg {
-        height: 78%;
-        flex-shrink: 0;
+        flex: 1;
     }
 
     .crunchyrollCardImg {
@@ -1490,10 +1490,8 @@
     .cenimaCardRating,
     .crunchyrollCardRating,
     .primeCardRating {
-        height: 22%;
-        font-size: 14px;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        height: 20%;
+        font-size: 15px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1512,9 +1510,9 @@
 
     /* ================= ALL GRID PAGE ================= */
     #allGrid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        padding: 14px;
     }
 
     .badge {
