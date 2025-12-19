@@ -1393,7 +1393,6 @@
     #homepage_GRID a:hover {
         transform: scale(1.08);
     }
-}
 
     /* ================= PLATFORM HEADERS ================= */
     #appleTvHeader,
@@ -1561,3 +1560,4 @@
         height: 100%;
         object-fit: cover;
     }
+}
