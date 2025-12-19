@@ -1538,12 +1538,14 @@
     #Movies-body .header-title,
     #shows_BODY .header-title {
         font-size: 22px;
+        margin-right: 20px;
     }
 
     #Movies-body .close-button,
     #shows_BODY .close-button {
         font-size: 26px;
         padding: 4px 10px;
+         margin-left: -20px;
     }
 }
 
