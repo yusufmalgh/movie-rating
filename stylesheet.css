@@ -1329,7 +1329,7 @@
 /* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 768px) {
 
-    /* ===== NAVBAR (keep one row, smaller) ===== */
+    /* ================= NAVBAR ================= */
     #homepage_NAVBAR {
         padding: 12px 16px;
     }
@@ -1345,7 +1345,7 @@
         margin-left: 12px;
     }
 
-    /* ===== HEADER TEXT ===== */
+    /* ================= HEADER ================= */
     #homepage_HEADER {
         margin-top: 60px;
         padding: 30px 16px;
@@ -1359,13 +1359,14 @@
         font-size: 14px;
     }
 
-    /* ===== HOMEPAGE GRID (3 x 2 instead of 6 x 1) ===== */
+    /* ================= HOMEPAGE GRID ================= */
     #homepage_GRID {
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
         max-width: 100%;
         margin: 0 auto;
         padding: 0 20px;
+        margin-left: 55px;
     }
 
     #homepage_GRID a {
@@ -1379,19 +1380,15 @@
         height: 55px;
     }
 
-    #homepage_GRID a:hover {
-        transform: scale(1.15);
-    }
-
-    /* ===== ALL PLATFORM HEADERS (icons smaller) ===== */
+    /* ================= PLATFORM HEADERS ================= */
     #appleTvHeader,
     #osnHeader,
     #netflixHeader,
     #cenimaHeader,
     #crunchyrollHeader,
     #primeHeader {
-        padding: 25px 0;
-        gap: 20px;
+        padding: 20px 0;
+        gap: 2px;
     }
 
     .appleTvHeaderIcon,
@@ -1400,8 +1397,8 @@
     .cenimaHeaderIcon,
     .crunchyrollHeaderIcon,
     .primeHeaderIcon {
-        width: 48px;
-        height: 48px;
+        width: 42px;
+        height: 42px;
         border-radius: 12px;
     }
 
@@ -1413,7 +1410,7 @@
         height: 70px;
     }
 
-    /* ===== SWITCH BUTTONS (smaller) ===== */
+    /* ================= SWITCH BUTTONS ================= */
     .appleTvSwitchActive,
     .appleTvSwitchInactive,
     .osnSwitchActive,
@@ -1430,36 +1427,67 @@
         padding: 8px 16px;
     }
 
-    /* ===== CARDS (smaller but same look) ===== */
+    /* ================= CARD FIX (IMPORTANT PART) ================= */
     .appleTvCard,
     .osnCard,
     .netflixCard,
     .cenimaCard,
     .crunchyrollCard,
     .primeCard {
-        width: 170px;
-        height: 290px;
+        width: 140px;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden;
+        flex-shrink: 0;
     }
 
+    /* IMAGE SECTION = 80% */
     .appleTvCardImg,
     .osnCardImg,
     .netflixCardImg,
     .cenimaCardImg,
     .crunchyrollCardImg,
     .primeCardImg {
-        height: 230px;
+        height: 80%;
     }
 
+    /* IMAGE FIT */
+    .appleTvCardImg img,
+    .osnCardImg img,
+    .netflixCardImg img,
+    .cenimaCardImg img,
+    .crunchyrollCardImg img,
+    .primeCardImg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* RATING BAR = 20% */
     .appleTvCardRating,
     .osnCardRating,
     .netflixCardRating,
     .cenimaCardRating,
     .crunchyrollCardRating,
     .primeCardRating {
+        height: 20%;
         font-size: 14px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
-    /* ===== ALL GRID PAGE ===== */
+    /* ================= HORIZONTAL GRIDS ================= */
+    .appleTvGrid,
+    .osnGrid,
+    .netflixGrid,
+    .cenimaGrid,
+    .crunchyrollGrid,
+    .primeGrid {
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    /* ================= ALL GRID PAGE ================= */
     #allGrid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -1472,7 +1500,7 @@
         font-size: 16px;
     }
 
-    /* ===== MOVIES / SHOWS HEADER ===== */
+    /* ================= MOVIES / SHOWS HEADERS ================= */
     #Movies-body .header-title,
     #shows_BODY .header-title {
         font-size: 22px;
@@ -1483,4 +1511,4 @@
         font-size: 26px;
         padding: 4px 10px;
     }
-} 
+}
