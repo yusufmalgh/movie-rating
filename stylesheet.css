@@ -1,0 +1,1329 @@
+/*_________HOMEPAGE_________*/
+
+#homepage_BODY {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    text-align: center;
+
+}
+
+#homepage_NAVBAR {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #111;
+    position: sticky;
+   
+}
+
+#homepage_LOGO {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#homepage_SHOWS_LINK,
+#homepage_MOVIES_LINK {
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+#homepage_SHOWS_LINK:hover,
+#homepage_MOVIES_LINK:hover {
+    color: #ff0000;
+}
+
+#homepage_HEADER {
+    margin-top: 100px;
+    padding: 50px 20px;
+}
+
+#homepage_MAIN_TITLE {
+    font-size: 36px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+#homepage_SUBTITLE {
+    color: #bbb;
+    font-size: 18px;
+}
+
+#homepage_GRID {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+ margin-top: -10px;
+    max-width: 900px;
+    margin-left: 300px;
+}
+
+#homepage_GRID a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;  
+    height: 120px;
+    background-color: white;
+    border-radius: 20px;
+    transition: 0.3s;
+   
+}
+
+#homepage_GRID a img {
+    width: 80px;    
+    height: 80px;
+    object-fit: cover; 
+    background-color: white;
+}
+
+#homepage_GRID a:hover{
+    transform: scale(1.4);
+}
+
+/*_________APPLE TV _________*/
+
+#appleTvBody {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* ================= HEADER ================= */
+
+#appleTvHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    gap: 50px;
+}
+
+#appleTvHeader a {
+    text-decoration: none;
+}
+
+.appleTvHeaderIcon {
+    width: 65px;
+    height: 65px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 7px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+#appleTvHeader a:hover .appleTvHeaderIcon {
+    transform: scale(1.20);
+}
+
+.appleTvHeaderIcon.appleTvMain {
+    width: 100px;
+    height: 100px;
+}
+
+.appleTvHeaderIcon.appleTvMain img {
+    width: 80%;
+    height: 80%;
+}
+
+
+#appleIconApple {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+    transition: none;
+}
+
+#appleTvHeader a:hover #appleIconApple {
+    transform: none;
+}
+
+
+#appleTvSwitch {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    padding: 0 40px 30px 40px;
+}
+
+.appleTvSwitchActive {
+    background-color: #333;  /* dark grey */
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: default;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.appleTvSwitchActive:hover {
+    background-color: #444; /* slightly lighter grey on hover */
+    color: #fff;
+}
+
+.appleTvSwitchInactive {
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.appleTvSwitchInactive:hover {
+    background-color: rgba(85,85,85,0.07);
+    border-color: #666;
+    color: #555;
+}
+
+
+.appleTvSection {
+    padding: 10px 40px 40px 40px;
+}
+
+.appleTvSection h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+
+.appleTvGrid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.appleTvCard {
+    width: 230px;
+    height: 380px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.appleTvCard:hover {
+    transform: scale(1.05);
+}
+
+.appleTvCardImg {
+    width: 100%;
+    height: 304px;
+    background-color: white;
+}
+
+.appleTvCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: #fff;
+}
+
+.appleTvCardRating {
+    width: 100%;
+    height: 20%;
+    background-color: #2d2d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+#appleTvFooter {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    margin-top: 30px;
+}
+
+
+
+/*_________OSN PAGE_________*/
+
+#osnBody {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+#osnHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    gap: 50px;
+}
+
+#osnHeader a {
+    text-decoration: none;
+}
+
+#osnHeader a:hover .osnHeaderIcon {
+    transform: scale(1.20);
+}
+
+.osnHeaderIcon {
+    width: 65px;
+    height: 65px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 7px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.osnHeaderIcon.osnMain {
+    width: 100px;
+    height: 100px;
+}
+
+.osnHeaderIcon.osnMain img {
+    width: 80%;
+    height: 80%;
+}
+
+#osnSwitch {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    padding: 0 40px 30px 40px;
+}
+
+.osnSwitchActive {
+    background-color: #fe01d2;
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.osnSwitchActive:hover {
+    background-color: #ff33e0; /* slightly lighter on hover */
+    color: #fff;
+}
+
+.osnSwitchInactive {
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.osnSwitchInactive:hover {
+    background-color: rgba(85,85,85,0.07);
+    border-color: #666;
+    color: #555;
+}
+
+.osnSection {
+    padding: 10px 40px 40px 40px;
+}
+
+.osnSection h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.osnGrid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.osnCard {
+    width: 230px;
+    height: 380px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.osnCard:hover {
+    transform: scale(1.05);
+}
+
+.osnCardImg {
+    width: 100%;
+    height: 304px;
+    background-color: white;
+}
+
+.osnCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: #fff;
+}
+
+.osnCardRating {
+    width: 100%;
+    height: 20%;
+    background-color: #fe01d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+#osnFooter {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    margin-top: 30px;
+}
+
+/*_________NETFLIX PAGE_________*/
+
+#netflixBody {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #141414;
+    color: #fff;
+}
+
+#netflixHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #141414;
+    padding: 40px 0;
+    gap: 50px;
+}
+
+#netflixHeader a {
+    text-decoration: none;
+}
+
+#netflixHeader a:hover .netflixHeaderIcon {
+    transform: scale(1.20);
+}
+
+#netflixBody #netflixIconNetflix {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+    transition: none;
+}
+
+#cenimaBody #netflixIconNetflix,
+#appleTvBody #netflixIconNetflix,
+#osnBody #netflixIconNetflix {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+#netflixHeader a:hover #netflixIconNetflix {
+    transform: none;
+}
+
+.netflixHeaderIcon {
+    width: 65px;
+    height: 65px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 7px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.netflixHeaderIcon.netflixMain {
+    width: 100px;
+    height: 100px;
+}
+
+.netflixHeaderIcon.netflixMain img {
+    width: 80%;
+    height: 80%;
+}
+
+#netflixSwitch {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    padding: 0 40px 30px 40px;
+}
+
+.netflixSwitchActive {
+    background-color: #ff4e50;
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.netflixSwitchActive:hover {
+    background-color: #ff6a6b;
+    color: #fff;
+}
+
+.netflixSwitchInactive {
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.netflixSwitchInactive:hover {
+    background-color: rgba(85,85,85,0.07);
+    border-color: #666;
+    color: #555;
+}
+
+.netflixSection {
+    padding: 10px 40px 40px 40px;
+}
+
+.netflixSection h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.netflixGrid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.netflixCard {
+    width: 230px;
+    height: 380px;
+    background-color: #222;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.netflixCard:hover {
+    transform: scale(1.05);
+}
+
+.netflixCardImg {
+    width: 100%;
+    height: 304px;
+    background-color: #141414;
+}
+
+.netflixCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: #141414;
+}
+
+.netflixCardRating {
+    width: 100%;
+    height: 20%;
+    background-color: #b81d24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+#netflixFooter {
+    background-color: #141414;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    margin-top: 30px;
+}
+
+
+.appleTvSection .appleTvGrid,
+.osnSection .osnGrid,
+.netflixSection .netflixGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+}
+
+.appleTvSection .appleTvCard,
+.osnSection .osnCard,
+.netflixSection .netflixCard {
+    flex: 0 0 auto;
+}
+
+
+.appleTvSection .appleTvGrid::-webkit-scrollbar,
+.osnSection .osnGrid::-webkit-scrollbar,
+.netflixSection .netflixGrid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.appleTvSection .appleTvGrid,
+.osnSection .osnGrid,
+.netflixSection .netflixGrid {
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none;     /* Firefox */
+}
+
+/*_________CENIMA PAGE_________*/
+
+#cenimaBody {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #181818;
+    color: #fff;
+}
+
+#cenimaHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #181818;
+    padding: 40px 0;
+    gap: 50px;
+}
+
+#cenimaHeader a {
+    text-decoration: none;
+}
+
+.cenimaHeaderIcon {
+    width: 65px;
+    height: 65px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 7px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+#cenimaHeader a:hover .cenimaHeaderIcon {
+    transform: scale(1.2);
+}
+
+#cenimaIconCenima {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+    transition: none;
+}
+
+#cenimaSwitch {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    padding: 0 40px 30px;
+}
+
+.cenimaSwitchActive {
+    background-color: #0a3d62; /* dark blue */
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: default;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.cenimaSwitchActive:hover {
+    background-color: #1356a2; /* slightly lighter dark blue on hover */
+    color: #fff;
+}
+
+.cenimaSwitchInactive {
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 18px;
+    cursor: default;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.cenimaSwitchInactive:hover {
+    background-color: rgba(85,85,85,0.07);
+    border-color: #666;
+    color: #555;
+}
+
+.cenimaSection {
+    padding: 10px 40px 40px;
+}
+
+.cenimaSection h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.cenimaGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.cenimaGrid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.cenimaCard {
+    flex: 0 0 auto;
+    width: 230px;
+    height: 380px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.cenimaCard:hover {
+    transform: scale(1.05);
+}
+
+.cenimaCardImg {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.cenimaCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cenimaCardRating {
+    width: 100%;
+    height: 20%;
+    background-color: #0a3d62; /* dark blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+#cenimaFooter {
+    background-color: #181818;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    margin-top: 30px;
+}
+
+/*_________CRUNCHYROLL PAGE_________*/
+
+#crunchyrollBody {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #222;
+}
+
+#crunchyrollHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    gap: 50px;
+}
+
+#crunchyrollHeader a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.crunchyrollHeaderIcon {
+    width: 65px;
+    height: 65px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 7px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+#crunchyrollHeader a:hover .crunchyrollHeaderIcon {
+    transform: scale(1.20);
+}
+
+#crunchyrollIconCrunchyroll {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+    transition: none;
+}
+
+#crunchyrollHeader a:hover #crunchyrollIconCrunchyroll {
+    transform: none;
+}
+
+#crunchyrollSwitch {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    padding: 0 40px 30px 40px;
+}
+
+.crunchyrollSwitchActive {
+    background-color: #f47521;
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.crunchyrollSwitchActive:hover {
+    background-color: #ff9640;
+    color: #fff;
+}
+
+
+.crunchyrollSwitchInactive {
+    background-color: transparent;
+    border: 2px solid #bbb;
+    color: #bbb;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+
+.crunchyrollSection {
+    padding: 10px 40px 40px 40px;
+}
+
+.crunchyrollSectionTitle {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #f47521;
+}
+
+.crunchyrollGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.crunchyrollGrid::-webkit-scrollbar {
+    display: none;
+}
+
+.crunchyrollCard {
+    flex: 0 0 auto;
+    width: 230px;
+    height: 380px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 8px 0 rgba(244,117,33,0.06);
+}
+
+.crunchyrollCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px 0 rgba(244,117,33,0.10);
+}
+
+.crunchyrollCardImg {
+    width: 100%;
+    height: 304px;
+    background-color: #fff4e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crunchyrollCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: #fff4e8;
+}
+
+.crunchyrollCardRating {
+    width: 100%;
+    height: 20%;
+    background-color: #f47521;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+#crunchyrollFooter {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    margin-top: 30px;
+}
+
+/*_________PRIME PAGE_________*/
+
+#primeBody {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #141414;
+    color: #fff;
+}
+
+#primeHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #141414;
+    padding: 40px 0;
+    gap: 50px;
+}
+
+#primeHeader a {
+    text-decoration: none;
+}
+
+.primeHeaderIcon {
+    width: 65px;
+    height: 65px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 7px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+#primeHeader a:hover .primeHeaderIcon {
+    transform: scale(1.20);
+}
+
+.primeHeaderIcon.primeMain {
+    width: 100px;
+    height: 100px;
+}
+
+.primeHeaderIcon.primeMain img {
+    width: 80%;
+    height: 80%;
+}
+
+/* Prime TV icon on Prime TV page: dark and static, no hover, no pointer events */
+#primeicon {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+    transition: none;
+}
+
+#primeHeader a:hover #primeIconPrime {
+    transform: none;
+}
+
+/* Netflix icon on Prime TV page: normal and interactive */
+#primeBody #netflixIconNetflix {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+#primeSwitch {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    padding: 0 40px 30px 40px;
+}
+
+.primeSwitchActive {
+    background-color: #00a8e1;
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: default;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.primeSwitchInactive {
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.primeSwitchInactive:hover {
+    background-color: rgba(85,85,85,0.07);
+    border-color: #666;
+    color: #555;
+}
+
+.primeSection {
+    padding: 10px 40px 40px 40px;
+}
+
+.primeSectionTitle {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.primeGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none;     /* Firefox */
+}
+.primeGrid::-webkit-scrollbar {
+    display: none;
+}
+
+.primeCard {
+    flex: 0 0 auto;
+    width: 230px;
+    height: 380px;
+    background-color: #222;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 8px 0 rgba(0,168,225,0.08);
+}
+.primeCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px 0 rgba(0,168,225,0.13);
+}
+
+.primeCardImg {
+    width: 100%;
+    height: 304px;
+    background-color: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.primeCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: #141414;
+}
+
+.primeCardRating {
+    width: 100%;
+    height: 20%;
+    background-color: #00a8e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+#primeFooter {
+    background-color: #141414;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    margin-top: 30px;
+}
+
+
+
+/*_________ALL GRID (ALL PLATFORMS)_________*/
+
+/*_________ALL MOVIES PAGE_________*/
+
+/* ====== ALL MOVIES PAGE BODY AND HEADER ====== */
+#Movies-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+#Movies-body .header-nav {
+    display: flex;
+    align-items: center;
+    padding: 22px 48px;
+    background: #000;
+}
+
+#Movies-body .header-title {
+    flex: 1;
+    font-size: 38px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1.2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    text-align: center;
+}
+
+#Movies-body .close-button {
+    font-size: 38px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 6px 16px;
+    margin-left: 28px;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 6px 0 rgba(255,78,80,0.10);
+}
+#Movies-body .close-button:hover {
+    background: #222;
+    color: #fff;
+    box-shadow: 0 3px 12px 0 rgba(255,78,80,0.22);
+}
+
+#shows_BODY {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+#shows_BODY .header-nav {
+    display: flex;
+    align-items: center;
+    padding: 22px 48px;
+    background: #000;
+}
+
+#shows_BODY .header-title {
+    flex: 1;
+    font-size: 38px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1.2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    text-align: center;
+}
+
+#shows_BODY .close-button {
+    font-size: 38px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 6px 16px;
+    margin-left: 28px;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 6px 0 rgba(255,78,80,0.10);
+}
+#shows_BODY .close-button:hover {
+    background: #222;
+    color: #fff;
+    box-shadow: 0 3px 12px 0 rgba(255,78,80,0.22);
+}
+
+/* ALL GRID (ALL PLATFORMS) - SIMPLIFIED AND MERGED */
+
+#allGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    box-sizing: border-box;
+}
+
+#allGrid > div {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #ff4e50;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#allGrid .netflixCard,
+#allGrid .cenimaCard,
+#allGrid .appleTvCard,
+#allGrid .osnCard,
+#allGrid .primeCard {
+    width: 100%;
+    max-width: 230px;
+    height: 380px;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+    margin: 0 auto;
+}
+
+#allGrid .netflixCard    { background-color: #222; }
+#allGrid .cenimaCard     { background-color: #0a3d62; }
+#allGrid .appleTvCard    { background-color: #2d2d2d; }
+#allGrid .osnCard        { background-color: #fe01d2; }
+#allGrid .primeCard      { background-color: #00a8e1; }
+
+#allGrid .netflixCard:hover,
+#allGrid .cenimaCard:hover,
+#allGrid .appleTvCard:hover,
+#allGrid .osnCard:hover,
+#allGrid .primeCard:hover {
+    transform: scale(1.05);
+}
+
+#allGrid .netflixCardImg,
+#allGrid .cenimaCardImg,
+#allGrid .appleTvCardImg,
+#allGrid .osnCardImg,
+#allGrid .primeCardImg {
+    width: 100%;
+    height: 304px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+#allGrid .netflixCardImg,
+#allGrid .primeCardImg {
+    background-color: #141414;
+}
+
+#allGrid .netflixCardImg img,
+#allGrid .cenimaCardImg img,
+#allGrid .appleTvCardImg img,
+#allGrid .osnCardImg img,
+#allGrid .primeCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: inherit;
+}
+
+#allGrid .netflixCardRating,
+#allGrid .cenimaCardRating,
+#allGrid .appleTvCardRating,
+#allGrid .osnCardRating,
+#allGrid .primeCardRating {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+}
+#allGrid .netflixCardRating   { background-color: #b81d24; }
+#allGrid .cenimaCardRating    { background-color: #0a3d62; }
+#allGrid .appleTvCardRating   { background-color: #2d2d2d; }
+#allGrid .osnCardRating       { background-color: #fe01d2; }
+#allGrid .primeCardRating     { background-color: #00a8e1; }
+
