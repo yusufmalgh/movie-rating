@@ -155,7 +155,7 @@
 }
 
 .appleTvSwitchActive {
-    background-color: #333;  /* dark grey */
+    background-color: #333;
     color: #fff;
     border-radius: 25px;
     border: none;
@@ -168,7 +168,7 @@
 }
 
 .appleTvSwitchActive:hover {
-    background-color: #444; /* slightly lighter grey on hover */
+    background-color: #444;
     color: #fff;
 }
 
@@ -605,14 +605,14 @@
 .appleTvSection .appleTvGrid::-webkit-scrollbar,
 .osnSection .osnGrid::-webkit-scrollbar,
 .netflixSection .netflixGrid::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
 }
 
 .appleTvSection .appleTvGrid,
 .osnSection .osnGrid,
 .netflixSection .netflixGrid {
-    -ms-overflow-style: none;  /* IE 10+ */
-    scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /*_________CENIMA PAGE_________*/
@@ -666,7 +666,7 @@
 }
 
 .cenimaSwitchActive {
-    background-color: #0a3d62; /* dark blue */
+    background-color: #0a3d62;
     color: #fff;
     border-radius: 25px;
     border: none;
@@ -679,7 +679,7 @@
 }
 
 .cenimaSwitchActive:hover {
-    background-color: #1356a2; /* slightly lighter dark blue on hover */
+    background-color: #1356a2;
     color: #fff;
 }
 
@@ -716,12 +716,12 @@
     overflow-x: auto;
     gap: 20px;
     padding: 10px;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .cenimaGrid::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
 }
 
 .cenimaCard {
@@ -758,7 +758,7 @@
 .cenimaCardRating {
     width: 100%;
     height: 20%;
-    background-color: #0a3d62; /* dark blue */
+    background-color: #0a3d62;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -986,7 +986,6 @@
     height: 80%;
 }
 
-/* Prime TV icon on Prime TV page: dark and static, no hover, no pointer events */
 #primeicon {
     opacity: 0.5;
     cursor: default;
@@ -998,7 +997,6 @@
     transform: none;
 }
 
-/* Netflix icon on Prime TV page: normal and interactive */
 #primeBody #netflixIconNetflix {
     opacity: 1;
     cursor: pointer;
@@ -1058,8 +1056,8 @@
     overflow-x: auto;
     gap: 20px;
     padding: 10px;
-    -ms-overflow-style: none;  /* IE 10+ */
-    scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .primeGrid::-webkit-scrollbar {
     display: none;
@@ -1342,45 +1340,60 @@
     #homepage_SHOWS_LINK,
     #homepage_MOVIES_LINK {
         font-size: 14px;
-        margin-left: 12px;
+        margin-left: 14px;
     }
 
     /* ================= HEADER ================= */
     #homepage_HEADER {
-        margin-top: 60px;
-        padding: 30px 16px;
+        margin-top: 50px;
+        padding: 24px 16px;
     }
 
     #homepage_MAIN_TITLE {
-        font-size: 24px;
+        font-size: 26px;
+        line-height: 1.3;
+        margin-bottom: 12px;
     }
 
     #homepage_SUBTITLE {
         font-size: 14px;
+        line-height: 1.4;
+        max-width: 280px;
+        margin: 0 auto;
+        color: #aaa;
     }
 
     /* ================= HOMEPAGE GRID ================= */
     #homepage_GRID {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 20px;
-
+        gap: 18px;
+        max-width: 360px;
+        margin: 32px auto 0 auto;
+        padding: 0 12px;
         justify-items: center;
         align-items: center;
     }
 
     #homepage_GRID a {
-        width: 90px;
-        height: 90px;
-        border-radius: 16px;
+        width: 100px;
+        height: 100px;
+        border-radius: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #homepage_GRID a img {
-        width: 55px;
-        height: 55px;
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
     }
+
+    #homepage_GRID a:hover {
+        transform: scale(1.08);
+    }
+}
 
     /* ================= PLATFORM HEADERS ================= */
     #appleTvHeader,
@@ -1437,11 +1450,13 @@
     .cenimaCard,
     .crunchyrollCard,
     .primeCard {
-        width: 140px;
-        height: 250px;
+        width: 150px;
+        height: 260px;
         border-radius: 20px;
         overflow: hidden;
         flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     .appleTvCardImg,
@@ -1450,7 +1465,12 @@
     .cenimaCardImg,
     .crunchyrollCardImg,
     .primeCardImg {
-        height: 80%;
+        height: 78%;
+        flex-shrink: 0;
+    }
+
+    .crunchyrollCardImg {
+        background-color: #000;
     }
 
     .appleTvCardImg img,
@@ -1470,10 +1490,13 @@
     .cenimaCardRating,
     .crunchyrollCardRating,
     .primeCardRating {
-        height: 20%;
+        height: 22%;
         font-size: 14px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     /* ================= HORIZONTAL GRIDS ================= */
@@ -1511,15 +1534,31 @@
         font-size: 26px;
         padding: 4px 10px;
     }
-}
-/* Disable OSN icon on OSN page */
+
 #osnBody #osnIconOsn {
     opacity: 0.5;
     pointer-events: none;
     cursor: default;
 }
 
-/* Stop hover animation on disabled OSN icon */
 #osnHeader a:hover #osnIconOsn {
     transform: none;
 }
+
+
+#osnBody #osnIconOsn {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+}
+
+#osnHeader a:hover #osnIconOsn {
+    transform: none;
+}
+
+    /* Crunchyroll image collapse fix */
+    .crunchyrollCardImg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
