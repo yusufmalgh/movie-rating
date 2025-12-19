@@ -1471,7 +1471,9 @@
     .cenimaCardImg,
     .crunchyrollCardImg,
     .primeCardImg {
-        flex: 1;
+        /* Remove flex: 1 to avoid interfering with rating area sizing */
+        /* Instead, let the card's aspect ratio and rating area height control the image space */
+        flex: unset;
     }
 
     .crunchyrollCardImg {
@@ -1495,11 +1497,17 @@
     .cenimaCardRating,
     .crunchyrollCardRating,
     .primeCardRating {
+        /* Use a fixed height (matching desktop: 20% of card height or 76px if card is 380px) */
         height: 20%;
+        min-height: 48px;
+        max-height: 76px;
         font-size: 15px;
         display: flex;
         align-items: center;
         justify-content: center;
+        /* Remove any flex: 1 or conflicting rules */
+        flex: unset;
+        box-sizing: border-box;
     }
 
     /* ================= HORIZONTAL GRIDS ================= */
@@ -1553,18 +1561,20 @@
 .crunchyrollCardImg img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;}
     /* ================= MOVIES & SHOWS PAGE CARDS ================= */
     #Movies-body .netflixCard,
     #Movies-body .cenimaCard,
     #Movies-body .appleTvCard,
     #Movies-body .osnCard,
     #Movies-body .primeCard,
+    #Movies-body .crunchyrollCard,
     #shows_BODY .netflixCard,
     #shows_BODY .cenimaCard,
     #shows_BODY .appleTvCard,
     #shows_BODY .osnCard,
-    #shows_BODY .primeCard {
+    #shows_BODY .primeCard,
+    #shows_BODY .crunchyrollCard {
         width: 100%;
         max-width: 140px;
         aspect-ratio: 230 / 380;
@@ -1580,12 +1590,15 @@
     #Movies-body .appleTvCardImg,
     #Movies-body .osnCardImg,
     #Movies-body .primeCardImg,
+    #Movies-body .crunchyrollCardImg,
     #shows_BODY .netflixCardImg,
     #shows_BODY .cenimaCardImg,
     #shows_BODY .appleTvCardImg,
     #shows_BODY .osnCardImg,
-    #shows_BODY .primeCardImg {
-        flex: 1;
+    #shows_BODY .primeCardImg,
+    #shows_BODY .crunchyrollCardImg {
+        /* Remove flex: 1 for consistent rating height */
+        flex: unset;
         width: 100%;
         aspect-ratio: 230 / 304;
         height: auto;
@@ -1595,16 +1608,53 @@
         background-color: inherit;
     }
 
+    /* Consistent rating height for all cards on all pages (mobile) */
+    .netflixCardRating,
+    .cenimaCardRating,
+    .appleTvCardRating,
+    .osnCardRating,
+    .primeCardRating,
+    .crunchyrollCardRating {
+        height: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: unset;
+        box-sizing: border-box;
+    }
+
+    /* Card image containers fill remaining space above rating (all cards, all pages, mobile) */
+    .netflixCardImg,
+    .cenimaCardImg,
+    .appleTvCardImg,
+    .osnCardImg,
+    .primeCardImg,
+    .crunchyrollCardImg {
+        height: calc(100% - 48px) !important;
+        aspect-ratio: unset !important;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: inherit;
+        flex: unset;
+    }
+
     #Movies-body .netflixCardImg img,
     #Movies-body .cenimaCardImg img,
     #Movies-body .appleTvCardImg img,
     #Movies-body .osnCardImg img,
     #Movies-body .primeCardImg img,
+    #Movies-body .crunchyrollCardImg img,
     #shows_BODY .netflixCardImg img,
     #shows_BODY .cenimaCardImg img,
     #shows_BODY .appleTvCardImg img,
     #shows_BODY .osnCardImg img,
-    #shows_BODY .primeCardImg img {
+    #shows_BODY .primeCardImg img,
+    #shows_BODY .crunchyrollCardImg img {
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -1612,4 +1662,3 @@
         display: block;
         background-color: inherit;
     }
-}
