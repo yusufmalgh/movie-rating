@@ -1366,6 +1366,7 @@
         max-width: 100%;
         margin: 0 auto;
         padding: 0 20px;
+        margin-right: 20px;
         
     }
 
@@ -1397,8 +1398,8 @@
     .cenimaHeaderIcon,
     .crunchyrollHeaderIcon,
     .primeHeaderIcon {
-        width: 300px;
-        height: 300px;
+        width: 30px;
+        height: 30px;
         border-radius: 12px;
     }
 
