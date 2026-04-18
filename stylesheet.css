@@ -57,7 +57,7 @@
 
 #homepage_GRID {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     margin-top: -10px;
     max-width: 900px;
     margin-left: auto;
@@ -70,8 +70,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px;  
-    height: 120px;
+    width: 100px;  
+    height: 100px;
     background-color: white;
     border-radius: 20px;
     transition: 0.3s;
@@ -650,9 +650,6 @@
     cursor: pointer;
 }
 
-#cenimaHeader a:hover .cenimaHeaderIcon {
-    transform: scale(1.2);
-}
 
 #cenimaIconCenima {
     opacity: 0.5;
@@ -770,6 +767,164 @@
 }
 
 #cenimaFooter {
+    background-color: #181818;
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    margin-top: 30px;
+}
+
+
+/*_________others PAGE_________*/
+
+#othersBody {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #181818;
+    color: #fff;
+}
+
+#othersHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #181818;
+    padding: 40px 0;
+    gap: 50px;
+}
+
+#othersHeader a {
+    text-decoration: none;
+}
+
+.othersHeaderIcon {
+    width: 65px;
+    height: 65px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 7px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+
+
+#othersIconOthers {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+    transition: none;
+}
+
+#othersSwitch {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    padding: 0 40px 30px;
+}
+
+.othersSwitchActive {
+    background-color: #06402b;
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: default;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.othersSwitchActive:hover {
+    background-color: #1356a2;
+    color: #fff;
+}
+
+.othersSwitchInactive {
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 18px;
+    cursor: default;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.othersSwitchInactive:hover {
+    background-color: rgba(85,85,85,0.07);
+    border-color: #666;
+    color: #555;
+}
+
+.othersSection {
+    padding: 10px 40px 40px;
+}
+
+.othersSection h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.othersGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.othersGrid::-webkit-scrollbar {
+    display: none;
+}
+
+.othersCard {
+    flex: 0 0 auto;
+    width: 230px;
+    height: 380px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.othersCard:hover {
+    transform: scale(1.05);
+}
+
+.othersCardImg {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.othersCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.othersCardRating {
+    width: 100%;
+    height: 20%;
+    background-color: #06402b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+#othersFooter {
     background-color: #181818;
     text-align: center;
     padding: 30px;
@@ -1256,7 +1411,9 @@
 #allGrid .cenimaCard,
 #allGrid .appleTvCard,
 #allGrid .osnCard,
-#allGrid .primeCard {
+#allGrid .primeCard,
+#allGrid .crunchyrollCard,
+#allGrid .othersCard {
     width: 100%;
     max-width: 230px;
     height: 380px;
@@ -1273,12 +1430,16 @@
 #allGrid .appleTvCard    { background-color: #2d2d2d; }
 #allGrid .osnCard        { background-color: #fe01d2; }
 #allGrid .primeCard      { background-color: #00a8e1; }
+#allGrid .crunchyrollCard { background-color: #f47521; }
+#allGrid .othersCard     { background-color: #06402b; }
 
 #allGrid .netflixCard:hover,
 #allGrid .cenimaCard:hover,
 #allGrid .appleTvCard:hover,
 #allGrid .osnCard:hover,
-#allGrid .primeCard:hover {
+#allGrid .primeCard:hover,
+#allGrid .crunchyrollCard:hover,
+#allGrid .othersCard:hover {
     transform: scale(1.05);
 }
 
@@ -1286,7 +1447,9 @@
 #allGrid .cenimaCardImg,
 #allGrid .appleTvCardImg,
 #allGrid .osnCardImg,
-#allGrid .primeCardImg {
+#allGrid .primeCardImg,
+#allGrid .crunchyrollCardImg,
+#allGrid .othersCardImg {
     width: 100%;
     height: 304px;
     display: flex;
@@ -1294,16 +1457,14 @@
     justify-content: center;
     background-color: #fff;
 }
-#allGrid .netflixCardImg,
-#allGrid .primeCardImg {
-    background-color: #141414;
-}
 
 #allGrid .netflixCardImg img,
 #allGrid .cenimaCardImg img,
 #allGrid .appleTvCardImg img,
 #allGrid .osnCardImg img,
-#allGrid .primeCardImg img {
+#allGrid .primeCardImg img,
+#allGrid .crunchyrollCardImg img,
+#allGrid .othersCardImg img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -1316,7 +1477,9 @@
 #allGrid .cenimaCardRating,
 #allGrid .appleTvCardRating,
 #allGrid .osnCardRating,
-#allGrid .primeCardRating {
+#allGrid .primeCardRating,
+#allGrid .crunchyrollCardRating,
+#allGrid .othersCardRating {
     width: 100%;
     height: 20%;
     display: flex;
@@ -1330,6 +1493,12 @@
 #allGrid .appleTvCardRating   { background-color: #2d2d2d; }
 #allGrid .osnCardRating       { background-color: #fe01d2; }
 #allGrid .primeCardRating     { background-color: #00a8e1; }
+#allGrid .crunchyrollCardRating { background-color: #f47521; }
+#allGrid .othersCardRating      { background-color: #06402b; }
+
+#allGrid .othersCard {
+    background-color: #06402b;
+}
 /* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 768px) {
 
@@ -1405,6 +1574,7 @@
     #osnHeader,
     #netflixHeader,
     #cenimaHeader,
+    #othersHeader,
     #crunchyrollHeader,
     #primeHeader {
         padding: 20px 0;
@@ -1416,6 +1586,7 @@
     .osnHeaderIcon,
     .netflixHeaderIcon,
     .cenimaHeaderIcon,
+    .othersHeaderIcon,
     .crunchyrollHeaderIcon,
     .primeHeaderIcon {
         width: 30px;
@@ -1440,6 +1611,8 @@
     .netflixSwitchInactive,
     .cenimaSwitchActive,
     .cenimaSwitchInactive,
+    .othersSwitchActive,
+    .othersSwitchInactive,
     .crunchyrollSwitchActive,
     .crunchyrollSwitchInactive,
     .primeSwitchActive,
@@ -1453,6 +1626,7 @@
     .osnCard,
     .netflixCard,
     .cenimaCard,
+    .othersCard,
     .crunchyrollCard,
     .primeCard {
         width: 100%;
@@ -1469,10 +1643,9 @@
     .osnCardImg,
     .netflixCardImg,
     .cenimaCardImg,
+    .othersCardImg,
     .crunchyrollCardImg,
     .primeCardImg {
-        /* Remove flex: 1 to avoid interfering with rating area sizing */
-        /* Instead, let the card's aspect ratio and rating area height control the image space */
         flex: unset;
     }
 
@@ -1484,6 +1657,7 @@
     .osnCardImg img,
     .netflixCardImg img,
     .cenimaCardImg img,
+    .othersCardImg img,
     .crunchyrollCardImg img,
     .primeCardImg img {
         width: 100%;
@@ -1495,9 +1669,9 @@
     .osnCardRating,
     .netflixCardRating,
     .cenimaCardRating,
+    .othersCardRating,
     .crunchyrollCardRating,
     .primeCardRating {
-        /* Use a fixed height (matching desktop: 20% of card height or 76px if card is 380px) */
         height: 20%;
         min-height: 48px;
         max-height: 76px;
@@ -1505,7 +1679,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        /* Remove any flex: 1 or conflicting rules */
         flex: unset;
         box-sizing: border-box;
     }
@@ -1515,6 +1688,7 @@
     .osnGrid,
     .netflixGrid,
     .cenimaGrid,
+    .othersGrid,
     .crunchyrollGrid,
     .primeGrid {
         gap: 12px;
@@ -1545,7 +1719,7 @@
     #shows_BODY .close-button {
         font-size: 26px;
         padding: 4px 10px;
-         margin-left: -20px;
+        margin-left: -20px;
     }
 }
 
@@ -1559,108 +1733,114 @@
     transform: none;
 }
 
-
 .crunchyrollCardImg img {
     width: 100%;
     height: 100%;
-    object-fit: cover;}
-    /* ================= MOVIES & SHOWS PAGE CARDS ================= */
-    #Movies-body .netflixCard,
-    #Movies-body .cenimaCard,
-    #Movies-body .appleTvCard,
-    #Movies-body .osnCard,
-    #Movies-body .primeCard,
-    #Movies-body .crunchyrollCard,
-    #shows_BODY .netflixCard,
-    #shows_BODY .cenimaCard,
-    #shows_BODY .appleTvCard,
-    #shows_BODY .osnCard,
-    #shows_BODY .primeCard,
-    #shows_BODY .crunchyrollCard {
-        width: 100%;
-        max-width: 230px;
-        aspect-ratio: 230 / 380;
-        height: auto;
-        border-radius: 16px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-    }
+    object-fit: cover;
+}
 
-    #Movies-body .netflixCardImg,
-    #Movies-body .cenimaCardImg,
-    #Movies-body .appleTvCardImg,
-    #Movies-body .osnCardImg,
-    #Movies-body .primeCardImg,
-    #Movies-body .crunchyrollCardImg,
-    #shows_BODY .netflixCardImg,
-    #shows_BODY .cenimaCardImg,
-    #shows_BODY .appleTvCardImg,
-    #shows_BODY .osnCardImg,
-    #shows_BODY .primeCardImg,
-    #shows_BODY .crunchyrollCardImg {
-        /* Remove flex: 1 for consistent rating height */
-        flex: unset;
-        width: 100%;
-        aspect-ratio: 230 / 304;
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: inherit;
-    }
+/* ================= MOVIES & SHOWS PAGE CARDS ================= */
+#Movies-body .netflixCard,
+#Movies-body .cenimaCard,
+#Movies-body .appleTvCard,
+#Movies-body .osnCard,
+#Movies-body .primeCard,
+#Movies-body .crunchyrollCard,
+#Movies-body .othersCard,
+#shows_BODY .netflixCard,
+#shows_BODY .cenimaCard,
+#shows_BODY .appleTvCard,
+#shows_BODY .osnCard,
+#shows_BODY .primeCard,
+#shows_BODY .crunchyrollCard,
+#shows_BODY .othersCard {
+    width: 100%;
+    max-width: 230px;
+    aspect-ratio: 230 / 380;
+    height: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
 
-    /* Consistent rating height for all cards on all pages (mobile) */
-    .netflixCardRating,
-    .cenimaCardRating,
-    .appleTvCardRating,
-    .osnCardRating,
-    .primeCardRating,
-    .crunchyrollCardRating {
-        height: 48px !important;
-        min-height: 48px !important;
-        max-height: 48px !important;
-        font-size: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex: unset;
-        box-sizing: border-box;
-    }
+#Movies-body .netflixCardImg,
+#Movies-body .cenimaCardImg,
+#Movies-body .appleTvCardImg,
+#Movies-body .osnCardImg,
+#Movies-body .primeCardImg,
+#Movies-body .crunchyrollCardImg,
+#Movies-body .othersCardImg,
+#shows_BODY .netflixCardImg,
+#shows_BODY .cenimaCardImg,
+#shows_BODY .appleTvCardImg,
+#shows_BODY .osnCardImg,
+#shows_BODY .primeCardImg,
+#shows_BODY .crunchyrollCardImg,
+#shows_BODY .othersCardImg {
+    flex: unset;
+    width: 100%;
+    aspect-ratio: 230 / 304;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+}
 
-    /* Card image containers fill remaining space above rating (all cards, all pages, mobile) */
-    .netflixCardImg,
-    .cenimaCardImg,
-    .appleTvCardImg,
-    .osnCardImg,
-    .primeCardImg,
-    .crunchyrollCardImg {
-        height: calc(100% - 48px) !important;
-        aspect-ratio: unset !important;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: inherit;
-        flex: unset;
-    }
+.netflixCardRating,
+.cenimaCardRating,
+.appleTvCardRating,
+.osnCardRating,
+.othersCardRating,
+.primeCardRating,
+.crunchyrollCardRating {
+    height: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: unset;
+    box-sizing: border-box;
+}
 
-    #Movies-body .netflixCardImg img,
-    #Movies-body .cenimaCardImg img,
-    #Movies-body .appleTvCardImg img,
-    #Movies-body .osnCardImg img,
-    #Movies-body .primeCardImg img,
-    #Movies-body .crunchyrollCardImg img,
-    #shows_BODY .netflixCardImg img,
-    #shows_BODY .cenimaCardImg img,
-    #shows_BODY .appleTvCardImg img,
-    #shows_BODY .osnCardImg img,
-    #shows_BODY .primeCardImg img,
-    #shows_BODY .crunchyrollCardImg img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center;
-        display: block;
-        background-color: inherit;
-    }
+.netflixCardImg,
+.cenimaCardImg,
+.appleTvCardImg,
+.osnCardImg,
+.othersCardImg,
+.primeCardImg,
+.crunchyrollCardImg {
+    height: calc(100% - 48px) !important;
+    aspect-ratio: unset !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+    flex: unset;
+}
+
+#Movies-body .netflixCardImg img,
+#Movies-body .cenimaCardImg img,
+#Movies-body .appleTvCardImg img,
+#Movies-body .osnCardImg img,
+#Movies-body .primeCardImg img,
+#Movies-body .crunchyrollCardImg img,
+#Movies-body .othersCardImg img,
+#shows_BODY .netflixCardImg img,
+#shows_BODY .cenimaCardImg img,
+#shows_BODY .appleTvCardImg img,
+#shows_BODY .osnCardImg img,
+#shows_BODY .primeCardImg img,
+#shows_BODY .crunchyrollCardImg img,
+#shows_BODY .othersCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: inherit;
+}
